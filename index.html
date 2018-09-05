@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
   <head>
     <title>My page</title>
@@ -15,20 +16,20 @@
     </ul>
     <img src="https://cdn.pixabay.com/photo/2014/12/08/11/49/love-560783_1280.jpg">
     <script>
-var x = document.getElementById("demo");
+  var x = document.getElementById("demo");
 
-function getLocation() {
+    function getLocation() {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(showPosition);
     } else { 
         x.innerHTML = "Geolocation is not supported by this browser.";
     }
-}
+      }
 
-function showPosition(position) {
+    function showPosition(position) {
     x.innerHTML = "Latitude: " + position.coords.latitude + 
     "<br>Longitude: " + position.coords.longitude;
-}
+    }
 </script>
   </body>
 </html>
