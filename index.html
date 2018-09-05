@@ -11,7 +11,24 @@
     <ul>
       <li><a href="https://www.facebook.com/"></a>fb</li>
       <li><a href="https://www.beebom.com/"></a>beebom</li>
+      <li><button onclick="getLocation()">Locate</button></li>
     </ul>
     <img src="https://cdn.pixabay.com/photo/2014/12/08/11/49/love-560783_1280.jpg">
+    <script>
+var x = document.getElementById("demo");
+
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+    } else { 
+        x.innerHTML = "Geolocation is not supported by this browser.";
+    }
+}
+
+function showPosition(position) {
+    x.innerHTML = "Latitude: " + position.coords.latitude + 
+    "<br>Longitude: " + position.coords.longitude;
+}
+</script>
   </body>
 </html>
